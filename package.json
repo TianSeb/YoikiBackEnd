@@ -1,0 +1,35 @@
+{
+  "name": "yoiki-mobile-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianSeb/YoikiBackEnd"
+  },
+  "keywords": [],
+  "author": "Sebastian Alasia",
+  "license": "Mayeutica INC",
+  "bugs": {
+    "url": "https://github.com/TianSeb/YoikiBackEnd/issues"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^8.3.2"
+  }
+}
