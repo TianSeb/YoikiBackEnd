@@ -1,0 +1,25 @@
+<table style="margin-top: 30px;" class="table table-dark table-hover" id="products-table">
+  <% if(!remitos) { %>
+    <div style="text-align: center; background-color: bisque;">
+      <h2>No hay Remitos</h2>
+    </div>
+  <% } else { %>
+  <tbody>
+    <thead>
+      <tr>
+        <th scope="col">Numero</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Destino</th>
+        <th scope="col">Peso Neto</th>
+      </tr>
+    </thead>
+  <% remitos.forEach(remito => { %>
+    <tr>
+      <td><%= remito.numero %></td>
+      <td><%= remito.producto %></td>
+      <td><%= remito.destinatario %></td>
+      <td><%= remito.neto %></td>
+    </tr>
+  <% }) } %>
+</tbody>
+</table>
