@@ -1,71 +1,54 @@
 body {
-  background-color: #e6ffe6;
+  background-color: #f9f9fa; /* Soft background color for overall page */
+  font-family: 'Segoe UI', Arial, sans-serif; /* Modern, legible font */
 }
 
 .table {
-  border-collapse: collapse;
-  margin-top: 30px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 80%;
+  margin: 20px auto; /* Centers the table and provides top and bottom margin */
+  border-collapse: collapse; /* Removes space between borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for 3D effect */
 }
 
-.table th,
-.table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+.table th, .table td {
+  padding: 12px 15px; /* Adequate padding for content */
+  text-align: left; /* Aligns text to the left for a clean look */
+  border-bottom: 1px solid #dee2e6; /* Light gray border for separation */
 }
 
 .table th {
-  background-color: #5b6f5c;
+  background-color: #6c7ae0; /* Soft blue background for headers */
+  color: white; /* White text for contrast */
+  font-size: 16px; /* Slightly larger font for headers */
+  text-transform: uppercase; /* Uppercase text for a formal look */
 }
 
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
+.table tbody tr:hover {
+  background-color: #f1f1f1; /* Light grey background on row hover */
 }
 
-.table tr:hover {
-  background-color: #ddd;
-}
-
-.table .no-products {
+.no-products {
   text-align: center;
-  background-color: bisque;
+  padding: 20px;
+  background-color: #ffc107; /* Bright warning color */
+  color: #333; /* Dark text for contrast */
+  margin: 20px; /* Adds margin around the message */
 }
 
 .no-products h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.container-fluid {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0; /* Ensures no extra space around the text */
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #5b6f5c;
+  background-color: #007bff; /* Standard blue for buttons */
   color: white;
-  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  text-decoration: none;
+  border: none;
   cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .button:hover {
-  background-color: #445748;
+  background-color: #0056b3; /* Darker blue on hover */
 }

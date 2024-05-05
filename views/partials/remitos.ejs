@@ -1,25 +1,32 @@
-<table style="margin-top: 30px;" class="table table-dark table-hover" id="products-table">
-  <% if(!remitos) { %>
-    <div style="text-align: center; background-color: bisque;">
+<% if (!remitos || remitos.length === 0) { %>
+  <div class="no-products">
       <h2>No hay Remitos</h2>
-    </div>
-  <% } else { %>
-  <tbody>
-    <thead>
-      <tr>
-        <th scope="col">Numero</th>
-        <th scope="col">Producto</th>
-        <th scope="col">Destino</th>
-        <th scope="col">Peso Neto</th>
-      </tr>
-    </thead>
-  <% remitos.forEach(remito => { %>
-    <tr>
-      <td><%= remito.numero %></td>
-      <td><%= remito.producto %></td>
-      <td><%= remito.destinatario %></td>
-      <td><%= remito.neto %></td>
-    </tr>
-  <% }) } %>
-</tbody>
-</table>
+      <!-- Optionally add a reload or back button -->
+      <button onclick="location.reload();">Recargar</button>
+  </div>
+<% } else { %>
+  <table class="table" id="products-table">
+      <thead>
+          <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Numero</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Destino</th>
+              <th scope="col">Peso Neto</th>
+              <th scope="col">Transportista</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% remitos.forEach(remito => { %>
+              <tr>
+                  <td><%= remito.fecha %></td>
+                  <td><%= remito.numero %></td>
+                  <td><%= remito.producto %></td>
+                  <td><%= remito.destinatario %></td>
+                  <td><%= remito.neto %></td>
+                  <td><%= remito.transportista %></td>
+              </tr>
+          <% }) %>
+      </tbody>
+  </table>
+<% } %>

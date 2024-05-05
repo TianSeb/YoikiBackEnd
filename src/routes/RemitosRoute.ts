@@ -12,7 +12,11 @@ remitosRoute
   )
   .get('/remitos/:numero', asyncHandler(remitoController.getRemitoByNumero))
   .post(
-    '/remitos/',
+    '/remito',
+    asyncHandler(remitoController.addRemito)
+  )
+  .post(
+    '/remitos',
     asyncHandler(remitoController.addRemitos)
   )
 
